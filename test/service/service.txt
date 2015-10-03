@@ -1,0 +1,7 @@
+#password=
+#userName=
+helpText=Netz service help text. Help must be one line. No quotes.
+displayName=Netz Service
+serviceName=Name must be unique!
+#startType=System.ServiceProcess.ServiceStartMode.Automatic
+

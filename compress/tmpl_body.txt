@@ -1,0 +1,26 @@
+		if(data == null) return null;
+		MemoryStream ins = null;
+		MemoryStream outs = null;
+		InflaterInputStream iis = null;
+		try{
+			ins = new MemoryStream(data);
+			outs = new MemoryStream();
+			iis = new InflaterInputStream(ins);
+			byte[] buff = new byte[data.Length];
+			while(true)
+			{
+				int r = iis.Read(buff, 0, buff.Length);
+				if(r <= 0) break;
+				outs.Write(buff, 0, r);
+			}
+			outs.Flush();
+			outs.Seek(0, SeekOrigin.Begin);
+		}
+		finally
+		{
+			if(ins != null) ins.Close();
+			if(iis != null) iis.Close();
+			ins = null;
+			iis = null;
+		}
+		return outs;

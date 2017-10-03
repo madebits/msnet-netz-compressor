@@ -336,7 +336,6 @@ namespace netz.starter
 						Logger.Log("! To help locate better the errors add the -v option to");
 						Logger.Log("! your current netz command-line and email also the screen output!");
 						Logger.Log("! No support is provided for custom startup and compress templates!");
-						Logger.Log("! Check http://madebits.com/netz/ for more help on how to report a bug!");
 
 						try
 						{

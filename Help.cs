@@ -11,7 +11,7 @@ namespace netz
 		private Help()
 		{}
 
-		internal static readonly string EMAIL = "http://madebits.com";
+		internal static readonly string EMAIL = "";
 
 		private static int GetYear()
 		{
